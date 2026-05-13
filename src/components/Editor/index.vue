@@ -1,20 +1,4 @@
 <template>
-  <div>
-    <el-upload
-      :action="uploadUrl"
-      :before-upload="handleBeforeUpload"
-      :on-success="handleUploadSuccess"
-      :on-error="handleUploadError"
-      name="file"
-      :show-file-list="false"
-      :headers="headers"
-      class="editor-img-uploader"
-      v-if="type == 'url'"
-    >
-      <i ref="uploadRef" class="editor-img-uploader"></i>
-    </el-upload>
-  </div>
-  <div class="editor">
     <quill-editor
       ref="quillEditorRef"
       v-model:content="content"
