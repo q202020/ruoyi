@@ -1,17 +1,18 @@
 import request from '@/utils/request'
 
-// 获取IM登录令牌
-export function getIMToken() {
-  return request({
-    url: '/workbench/instance/users/chat/token',
-    method: 'get'
-  })
-}
 
 // 会话列表 
 export function getSessionList() {
   return request({
     url: '/workbench/contact/list/waiting',
+    method: 'get'
+  })
+}
+
+// 获取IM登录令牌
+export function getIMToken() {
+  return request({
+    url: '/workbench/instance/users/chat/token',
     method: 'get'
   })
 }
